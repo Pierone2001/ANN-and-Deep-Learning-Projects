@@ -1,0 +1,17 @@
+# Orc filter configuration
+# After running clustering and inspecting montages, manually annotate which clusters are orc-like
+
+# List of cluster IDs that contain orc-like images
+# Fill this in after visual inspection of cluster montages
+orc_clusters: [2, 7, 9]
+
+# Whether to exclude orc images from patch extraction
+exclude_orc_images: true
+
+# Clustering parameters
+n_clusters: 10
+random_state: 42
+
+# Embedding extraction
+batch_size: 32
+

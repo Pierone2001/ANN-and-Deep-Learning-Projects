@@ -1,0 +1,16 @@
+# Artifact detection configuration
+
+# Green artifact detection parameters
+hue_range: [50, 80]  # HSV hue range for green (OpenCV: 0-180)
+saturation_threshold: 0.6  # Minimum saturation (0-1)
+value_threshold: 0.3  # Minimum brightness (0-1)
+
+# Threshold for flagging images as having cartoon artifacts
+artifact_threshold: 0.1  # Ratio of artifact pixels to flag as having artifacts
+
+# Whether to mask out artifacts in patches
+mask_artifacts_in_patches: false
+
+# Masking method: 'black', 'mean', or 'inpaint'
+masking_method: 'black'
+

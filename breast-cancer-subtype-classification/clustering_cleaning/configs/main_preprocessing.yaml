@@ -1,0 +1,41 @@
+# Main preprocessing configuration
+
+# Data paths
+# NOTE: Only processes train_data. test_data should be kept separate for final evaluation only.
+data_dir: "dataset"
+labels_csv: "dataset/train_labels.csv"
+
+# Output directories
+output_dir: "processed"
+metadata_dir: "metadata"
+artifacts_dir: "artifacts"
+logs_dir: "logs"
+reports_dir: "reports"
+
+# Processing steps (set to false to skip)
+run_dataset_discovery: true
+run_embedding_extraction: true
+run_clustering: true
+run_artifact_detection: true
+run_patch_extraction: false  # Disabilitato: non serve estrarre patch
+run_splits: false            # Disabilitato: non serve fare split senza patch
+
+# Embedding extraction
+embeddings_path: "artifacts/image_embeddings.npz"
+cluster_montages_dir: "reports/orc_clusters"
+
+# Metadata files
+images_metadata_path: "metadata/images_metadata.csv"
+patches_metadata_path: "metadata/patches_metadata.csv"
+
+# Split configuration
+val_size: 0.2
+test_size: 0.0  # Set to > 0 for test split
+random_state: 42
+
+# Sub-config paths
+orc_filter_config: "configs/orc_filter.yaml"
+artifacts_config: "configs/artifacts.yaml"
+patching_config: "configs/patching.yaml"
+augmentations_config: "configs/augmentations.yaml"
+

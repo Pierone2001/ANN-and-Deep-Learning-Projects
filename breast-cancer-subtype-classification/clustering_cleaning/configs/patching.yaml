@@ -1,0 +1,25 @@
+# Patch extraction configuration
+
+# Patch size (square patches)
+patch_size: 256
+
+# Stride for patch extraction (overlapping if < patch_size)
+stride: 256
+
+# Minimum ratio of tissue pixels in patch to keep it
+min_tissue_ratio: 0.1
+
+# Maximum ratio of artifact pixels allowed in patch
+max_artifact_ratio: 0.5
+
+# Cropping parameters
+crop_margin: 50  # Pixels to add around mask bbox
+crop_min_size: [256, 256]  # Minimum size to crop (if smaller, keep original)
+
+# Normalization method: 'imagenet', 'custom', or 'none'
+normalize_method: 'none'  # Set to 'imagenet' for ImageNet normalization
+
+# Custom normalization (if normalize_method='custom')
+# normalize_mean: [0.5, 0.5, 0.5]
+# normalize_std: [0.5, 0.5, 0.5]
+
